@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Notifications
+twmnd &
+
+# Composite manager
+xcompmgr &
+
+# Toolbar for Anthy
+ibus-daemon -drx &

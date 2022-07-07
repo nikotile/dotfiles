@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# source xprofile
+source ~/.config/X11/xprofile
+
+# Xresources
+userresources=$XDG_CONFIG_HOME/X11/Xresources
+[ -f "$userresources" ] && xrdb -merge "$userresources"
+
+# wallpaper
+[ -f /usr/bin/xwallpaper ] && xwallpaper --focus $XDG_CONFIG_HOME/wallpaper-zoom
+
+# Window manager
+exec awesome
