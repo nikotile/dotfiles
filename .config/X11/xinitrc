@@ -1,14 +1,15 @@
-#!/bin/bash
+#!/bin/sh
 
 # source xprofile
 source ~/.config/X11/xprofile
 
 # Xresources
-userresources=$XDG_CONFIG_HOME/X11/Xresources
-[ -f "$userresources" ] && xrdb -merge "$userresources"
+res=$XDG_CONFIG_HOME/X11/Xresources
+[ -f "$res" ] && xrdb -merge "$res"
 
 # wallpaper
-[ -f /usr/bin/xwallpaper ] && xwallpaper --focus $XDG_CONFIG_HOME/wallpaper-zoom
+[ ! -f "$XDG_DATA_HOME/wallpaper" ] && wget https://nikotile.xyz/wallpaper -P "$XDG_DATA_HOME"
+[ -f /usr/bin/xwallpaper ] && xwallpaper --focus $XDG_DATA_HOME/wallpaper
 
 # Window manager
 exec awesome

@@ -1,0 +1,30 @@
+#!/bin/sh
+alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+alias surge="npx surge"
+alias nodemon="npx nodemon"
+alias mail="mw -Y && neomutt"
+alias cdw="cd ~/dev/web/"
+alias cda="cd ~/dev/app/"
+alias cds="cd ~/dev/scripts/"
+alias cdf="cd ~/dev/frontend/"
+alias cdv="cd ~/dev/vn/"
+alias ls="ls --color=auto -h"
+alias lsl="ls -lh"
+alias sm="surfmenu"
+alias nv="nvim"
+alias e="$EDITOR"
+alias tex="nvim *.tex"
+alias rss="newsboat"
+
+alias abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile "$XDG_DATA_HOME"/abook/addressbook
+alias wget="wget --hsts-file='$XDG_CACHE_HOME/wget-hsts'"
+alias bti="bti --config $XDG_CONFIG_HOME/bti"
+alias monerod="monerod --sync-pruned-blocks --prune-blockchain --data-dir "$XDG_DATA_HOME"/bitmonero"
+
+alias trans="transmission-remote"
+
+alias kuro="ssh kuro"
+alias illya="ssh illya"
+alias miyu="ssh miyu"
+alias izumo="ssh izumo"
