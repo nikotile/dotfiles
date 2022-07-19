@@ -1,0 +1,9 @@
+[user]
+	email = 
+	name = 
+	signingkey = 
+[credential]
+	helper = /usr/bin/pass-git-helper
+	useHttpPath = true
+[commit]
+	gpgsign = true
