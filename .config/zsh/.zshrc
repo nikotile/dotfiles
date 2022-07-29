@@ -2,6 +2,11 @@ HISTFILE=$XDG_CACHE_HOME/zsh/history
 HISTSIZE=100000
 SAVEHIST=100000
 
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+
 autoload -U colors && colors	# Load colors
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
@@ -14,9 +19,10 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
-# alias and theme
+# alias, theme, and secrets
 source $XDG_CONFIG_HOME/zsh/alias
 source $ZDOTDIR/theme
+source $ZDOTDIR/secrets
 
 # nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
